@@ -21,3 +21,9 @@ https://github.com/microsoftarchive/redis/releases
 
 // Docker
 https://www.docker.com/products/docker-desktop/
+
+docker run hello-world
+docker run -it ubuntu bash
+cat /etc/os-release
+
+
