@@ -30,3 +30,6 @@ cat /etc/os-release
 iwr -useb get.scoop.sh | iex
 scoop help
 
+// установка symfony-cli
+scoop install symfony-cli
+
