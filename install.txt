@@ -42,5 +42,8 @@ symfony server:ca:install
 // проверка окружающей среды
 symfony book:check-requirements
 
+// развернуть symfony
+symfony new guestbook --version=7.0
+
 
 
