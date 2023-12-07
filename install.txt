@@ -26,4 +26,7 @@ docker run hello-world
 docker run -it ubuntu bash
 cat /etc/os-release
 
+// Установка scoop
+iwr -useb get.scoop.sh | iex
+scoop help
 
