@@ -33,3 +33,14 @@ scoop help
 // установка symfony-cli
 scoop install symfony-cli
 
+// регистрация SymfonyConnect
+connect.symfony.com
+
+// поддержка TLS
+symfony server:ca:install
+
+// проверка окружающей среды
+symfony book:check-requirements
+
+
+
