@@ -66,6 +66,9 @@ symfony composer req maker --dev
 symfony console list make
 php bin/console make:controller
 
+// добавление анотации
+ symfony composer req annotations
+
 
 
 
