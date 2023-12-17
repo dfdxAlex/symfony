@@ -45,5 +45,10 @@ symfony book:check-requirements
 // развернуть symfony
 symfony new guestbook --version=7.0
 
+// запуск сервера 
+symfony server:start -d
+// открыть страницу
+symfony open:local
+
 
 
