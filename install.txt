@@ -53,6 +53,14 @@ symfony open:local
 // Перенести фавикон в папку public
  php -r "copy('https://symfony.com/favicon.ico', 'public/favicon.ico');"
 
+// установить доолнительный пакет для отладки приложения
+ symfony composer req profiler --dev
+ composer show --all | grep profiler
+
+// добавить логирование и отладку
+symfony composer req logger
+symfony composer req debug --dev
+
 
 
 
