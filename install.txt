@@ -61,6 +61,12 @@ symfony open:local
 symfony composer req logger
 symfony composer req debug --dev
 
+// установка бандла maker-bundle
+symfony composer req maker --dev
+symfony console list make
+php bin/console make:controller
+
+
 
 
 
