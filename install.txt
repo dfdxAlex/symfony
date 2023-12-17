@@ -50,5 +50,9 @@ symfony server:start -d
 // открыть страницу
 symfony open:local
 
+// Перенести фавикон в папку public
+ php -r "copy('https://symfony.com/favicon.ico', 'public/favicon.ico');"
+
+
 
 
