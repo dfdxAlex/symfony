@@ -69,6 +69,14 @@ php bin/console make:controller
 // добавление анотации
  symfony composer req annotations
 
+// Установка сервера PostgreSql
+#docker-compose up -d
+#docker-compose ps
+
+// Запуск команды PostgreSql
+docker exec -it test_symfony-database-1 psql -U main -W main
+
+
 
 
 
