@@ -73,7 +73,7 @@ php bin/console make:controller
 #docker-compose up -d
 #docker-compose ps
 
-// Запуск команды PostgreSql
+// Подключение к базе данных PostgreSql
 docker exec -it test_symfony-database-1 psql -U main -W main
 
 
