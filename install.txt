@@ -76,6 +76,9 @@ php bin/console make:controller
 // Подключение к базе данных PostgreSql
 docker exec -it test_symfony-database-1 psql -U main -W main
 
+// Установка Doctrine
+symfony composer req orm
+
 
 
 
