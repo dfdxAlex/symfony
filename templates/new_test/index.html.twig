@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+
+<style>
+h3 {
+    width: 300px;
+}
+</style>
+
+{% for post in news%}
+
+    <h2>{{post.title}}</h2>
+    <h3>{{post.test}}</he>
+
+    <br><br><br><br><br>
+
+{% endfor%}
+
+{% endblock %}

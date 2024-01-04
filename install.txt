@@ -70,8 +70,8 @@ php bin/console make:controller
  symfony composer req annotations
 
 // Установка сервера PostgreSql
-#docker-compose up -d
-#docker-compose ps
+docker-compose up -d
+docker-compose ps
 
 // Подключение к базе данных PostgreSql
 docker exec -it test_symfony-database-1 psql -U main -W main
@@ -79,6 +79,32 @@ docker exec -it test_symfony-database-1 psql -U main -W main
 // Установка Doctrine
 symfony composer req orm
 
+// проверить работу пострег в контейнере доккер
+docker ps
+// проверить что симфони и дострин подключены к базе
+php bin/console doctrine:schema:update --force
+
+
+
+
+из файла docker-compose
+###> doctrine/doctrine-bundle ###
+  database:
+    image: postgres:${POSTGRES_VERSION:-"15"}-alpine
+    environment:
+      - POSTGRES_DB: ${POSTGRES_DB:-app}
+      # You should definitely change the password in production
+      - POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+      - POSTGRES_USER: ${POSTGRES_USER:-app}
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+###< doctrine/doctrine-bundle ###
+volumes:
+### > doctrine/doctrine-bundle ###
+  database_data:
+###< doctrine/doctrine-bundle ###
 
 
 

@@ -9,19 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController extends AbstractController
 {
-    #[Route('/name/{name}', name: 'app_test')]
+    #[Route('/name', name: 'app_test')]
     public function test(string $name = ''): Response
     {
         $rez = '';
-
-        // $name = $request->query->get('name');
-
         if ($name) {
             $rez = 'Привет '.$name.' к сожалению у нас ремонт.';
         }
-        // return $this->render('test/index.html.twig', [
-        //     'controller_name' => 'Привет, это метод test',
-        // ]);
         return new Response('
 
 <html>
