@@ -85,26 +85,17 @@ docker ps
 php bin/console doctrine:schema:update --force
 
 
+// создание базы данных
+1-Создание кластера базы данных
+initdb -D "C:\Program Files\PostgreSQL\16\data"
 
+2-старт/стоп/проверка
+pg_ctl -D "C:\Program Files\PostgreSQL\16\data" start
+pg_ctl -D "C:\Program Files\PostgreSQL\16\data" stop
+$ pg_isready -h localhost -p 5432
 
-из файла docker-compose
-###> doctrine/doctrine-bundle ###
-  database:
-    image: postgres:${POSTGRES_VERSION:-"15"}-alpine
-    environment:
-      - POSTGRES_DB: ${POSTGRES_DB:-app}
-      # You should definitely change the password in production
-      - POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
-      - POSTGRES_USER: ${POSTGRES_USER:-app}
-    volumes:
-      - database_data:/var/lib/postgresql/data:rw
-      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
-      # - ./docker/db/data:/var/lib/postgresql/data:rw
-###< doctrine/doctrine-bundle ###
-volumes:
-### > doctrine/doctrine-bundle ###
-  database_data:
-###< doctrine/doctrine-bundle ###
+php bin/console doctrine:database:create
+
 
 
 
