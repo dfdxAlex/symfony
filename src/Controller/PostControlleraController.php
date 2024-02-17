@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+// git remote -v
+// git remote set-url origin https://github.com/dfdxAlex/symfony.git
+
+
 //composer require symfony/twig-bundle
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
