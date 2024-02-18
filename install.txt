@@ -1,0 +1,110 @@
+// Установка симфони - создание проекта
+composer create-project symfony/skeleton test
+
+// Запуск локального сервера с помощью PHP
+php -S 127.0.0.1:8111 -t public
+
+// Установка командной строки Hyper
+https://hyper.is/
+
+// Проверить включённые модули
+php -m
+intl, 
+pdo_pgsql, 
+xsl, 
+gd, 
+openssl,
+sodium.
+
+// Redis
+https://github.com/microsoftarchive/redis/releases
+
+// Docker
+https://www.docker.com/products/docker-desktop/
+
+docker run hello-world
+docker run -it ubuntu bash
+cat /etc/os-release
+
+// Установка scoop
+iwr -useb get.scoop.sh | iex
+scoop help
+
+// установка symfony-cli
+scoop install symfony-cli
+
+// регистрация SymfonyConnect
+connect.symfony.com
+
+// поддержка TLS
+symfony server:ca:install
+
+// проверка окружающей среды
+symfony book:check-requirements
+
+// развернуть symfony
+symfony new guestbook --version=7.0
+
+// запуск сервера 
+symfony server:start -d
+// открыть страницу
+symfony open:local
+
+// Перенести фавикон в папку public
+ php -r "copy('https://symfony.com/favicon.ico', 'public/favicon.ico');"
+
+// установить доолнительный пакет для отладки приложения
+ symfony composer req profiler --dev
+ composer show --all | grep profiler
+
+// добавить логирование и отладку
+symfony composer req logger
+symfony composer req debug --dev
+
+// установка бандла maker-bundle
+symfony composer req maker --dev
+symfony console list make
+php bin/console make:controller
+
+// добавление анотации
+ symfony composer req annotations
+
+// Установка сервера PostgreSql
+docker-compose up -d
+docker-compose ps
+
+// Подключение к базе данных PostgreSql
+docker exec -it test_symfony-database-1 psql -U main -W main
+
+// Установка Doctrine
+symfony composer req orm
+
+// проверить работу пострег в контейнере доккер
+docker ps
+// проверить что симфони и дострин подключены к базе
+php bin/console doctrine:schema:update --force
+
+
+// создание базы данных
+1-Создание кластера базы данных
+initdb -D "C:\Program Files\PostgreSQL\16\data"
+
+2-старт/стоп/проверка без использования Docker
+pg_ctl -D "C:\Program Files\PostgreSQL\16\data" start
+pg_ctl -D "C:\Program Files\PostgreSQL\16\data" stop
+$ pg_isready -h localhost -p 5432
+
+//старт/проверка c использованием Docker
+//запуск сервера БД из контейнера
+docker-compose up -d
+//проверить
+docker-compose ps
+
+php bin/console doctrine:database:create
+
+
+SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
+
+
+
+

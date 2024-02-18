@@ -1,9 +1,15 @@
 twig:
+<<<<<<< HEAD
     file_name_pattern: '*.twig'
+=======
+>>>>>>> edf8f94b6cfc914cd66b211d361b81bd7baac6ae
     default_path: '%kernel.project_dir%/templates'
 
 when@test:
     twig:
         strict_variables: true
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> edf8f94b6cfc914cd66b211d361b81bd7baac6ae
